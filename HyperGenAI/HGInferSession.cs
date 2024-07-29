@@ -19,7 +19,6 @@ namespace HyperGenAI {
 
 		}
 
-
 		public List<string> Infer(string input, int top_k=50, float top_p=0.9f, float temp=0.75f, float repeatPenalty=1f, int maxLength=100, bool doSample=true) {
 			List<string> outputs = new List<string>();
 			var parameters = GetGeneratorParams(top_k, top_p, temp,repeatPenalty,maxLength,doSample);
