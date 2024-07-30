@@ -36,6 +36,11 @@ namespace HyperGenAI {
 			return outputs;
 		}
 
+		public List<object> GetEmbedding(string input) {
+			//TODO: Implement
+			return new List<object>();
+		}
+
 		private GeneratorParams GetGeneratorParams(int top_k, float top_p, float temp, float repeatPenalty, int maxLength, bool doSample) {
 			var parameters = new GeneratorParams(_model);
 			parameters.SetSearchOption("top_k", 50);
@@ -51,7 +56,6 @@ namespace HyperGenAI {
 			parameters.SetSearchOption("no_repeat_ngram_size", 0);
 			parameters.SetSearchOption("early_stopping", false);
 			parameters.SetSearchOption("length_penalty", 1f);
-			parameters.SetSearchOption("num_beam_groups", 1);
 			parameters.SetSearchOption("diversity_penalty", 0f);
 			
 			return parameters;
